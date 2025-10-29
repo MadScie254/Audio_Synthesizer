@@ -599,7 +599,7 @@
     <canvas id="foregroundCanvas"></canvas>
 
     <div class="loading-overlay" id="loadingOverlay">
-        <div class="loading-text">Initializing Audio Engine</div>
+        <div class="loading-text">🎛️ APEX SYNTHESIZER</div>
         <div class="loading-spinner"></div>
     </div>
 
@@ -609,77 +609,78 @@
         </div>
         
         <div class="panel-header">
-            <div class="panel-title">Audio Synthesizer</div>
+            <div class="panel-title">⚡ APEX</div>
+            <div class="status-badge">LIVE</div>
         </div>
 
         <div class="control-section">
-            <div class="section-title">Audio Source</div>
+            <div class="section-title">🎵 Audio Source</div>
             <div class="file-input-wrapper">
-                <input type="file" id="audioFile" accept="audio/*">
+                <input type="file" id="audioFile" accept="audio/*" title="Load Audio File">
                 <label for="audioFile" class="file-input-label">
-                    📁 Load Audio File
+                    📁 Load Audio
                 </label>
             </div>
             <div class="button-group">
-                <button id="micBtn">🎤 Microphone</button>
-                <button id="playBtn">▶️ Play</button>
+                <button id="micBtn" title="Toggle Microphone">🎤 MIC</button>
+                <button id="playBtn" title="Play Audio">▶️ PLAY</button>
             </div>
         </div>
 
         <div class="control-section">
-            <div class="section-title">Visualization Mode</div>
+            <div class="section-title">👁️ Visualization</div>
             <div class="mode-grid">
-                <button class="mode-btn active" data-mode="hypnotic">Hypnotic</button>
-                <button class="mode-btn" data-mode="fractal">Fractal</button>
-                <button class="mode-btn" data-mode="vocal">Vocal</button>
-                <button class="mode-btn" data-mode="synth">Synthesizer</button>
-                <button class="mode-btn" data-mode="quantum">Quantum</button>
-                <button class="mode-btn" data-mode="neural">Neural</button>
+                <button class="mode-btn active" data-mode="hypnotic" title="Hypnotic mode">Hypnotic</button>
+                <button class="mode-btn" data-mode="fractal" title="Fractal mode">Fractal</button>
+                <button class="mode-btn" data-mode="vocal" title="Vocal mode">Vocal</button>
+                <button class="mode-btn" data-mode="synth" title="Synth mode">Synth</button>
+                <button class="mode-btn" data-mode="quantum" title="Quantum mode">Quantum</button>
+                <button class="mode-btn" data-mode="neural" title="Neural mode">Neural</button>
             </div>
         </div>
 
         <div class="control-section">
-            <div class="section-title">Effects</div>
+            <div class="section-title">🎚️ Effects</div>
             <div class="slider-control">
                 <div class="slider-label">
                     <span>Reverb</span>
                     <span id="reverbValue">50%</span>
                 </div>
-                <input type="range" id="reverbSlider" min="0" max="100" value="50">
+                <input type="range" id="reverbSlider" min="0" max="100" value="50" title="Reverb Amount">
             </div>
             <div class="slider-control">
                 <div class="slider-label">
                     <span>Distortion</span>
                     <span id="distortionValue">0%</span>
                 </div>
-                <input type="range" id="distortionSlider" min="0" max="100" value="0">
+                <input type="range" id="distortionSlider" min="0" max="100" value="0" title="Distortion Amount">
             </div>
             <div class="slider-control">
                 <div class="slider-label">
                     <span>Delay</span>
                     <span id="delayValue">30%</span>
                 </div>
-                <input type="range" id="delaySlider" min="0" max="100" value="30">
+                <input type="range" id="delaySlider" min="0" max="100" value="30" title="Delay Amount">
             </div>
         </div>
 
         <div class="control-section">
-            <div class="section-title">Synthesizer</div>
+            <div class="section-title">🎹 Synthesizer</div>
             <div class="synth-keys" id="synthKeys">
-                <div class="synth-key" data-note="C">C</div>
-                <div class="synth-key" data-note="D">D</div>
-                <div class="synth-key" data-note="E">E</div>
-                <div class="synth-key" data-note="F">F</div>
-                <div class="synth-key" data-note="G">G</div>
-                <div class="synth-key" data-note="A">A</div>
-                <div class="synth-key" data-note="B">B</div>
-                <div class="synth-key" data-note="C2">C+</div>
+                <div class="synth-key" data-note="C" title="C Note">C</div>
+                <div class="synth-key" data-note="D" title="D Note">D</div>
+                <div class="synth-key" data-note="E" title="E Note">E</div>
+                <div class="synth-key" data-note="F" title="F Note">F</div>
+                <div class="synth-key" data-note="G" title="G Note">G</div>
+                <div class="synth-key" data-note="A" title="A Note">A</div>
+                <div class="synth-key" data-note="B" title="B Note">B</div>
+                <div class="synth-key" data-note="C2" title="High C">C+</div>
             </div>
             <div class="slider-control">
                 <div class="slider-label">
                     <span>Wave Type</span>
                 </div>
-                <select id="waveType" style="width: 100%; padding: 8px; background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); border-radius: 4px;">
+                <select id="waveType" title="Select waveform type">
                     <option value="sine">Sine</option>
                     <option value="square">Square</option>
                     <option value="sawtooth">Sawtooth</option>
@@ -689,38 +690,38 @@
         </div>
 
         <div class="control-section">
-            <div class="section-title">Visual Settings</div>
+            <div class="section-title">🎨 Visual Settings</div>
             <div class="slider-control">
                 <div class="slider-label">
                     <span>Intensity</span>
                     <span id="intensityValue">70%</span>
                 </div>
-                <input type="range" id="intensitySlider" min="0" max="100" value="70">
+                <input type="range" id="intensitySlider" min="0" max="100" value="70" title="Visual Intensity">
             </div>
             <div class="slider-control">
                 <div class="slider-label">
                     <span>Particles</span>
                     <span id="particlesValue">50</span>
                 </div>
-                <input type="range" id="particlesSlider" min="0" max="200" value="50">
+                <input type="range" id="particlesSlider" min="0" max="200" value="50" title="Particle Count">
             </div>
         </div>
     </div>
 
     <div class="info-panel">
-        <div style="font-size: 0.9rem; font-weight: 500; margin-bottom: 5px;">Frequency Spectrum</div>
+        <div class="spectrum-title">🔊 Frequency Spectrum</div>
         <div class="frequency-bars" id="frequencyBars">
-            <div class="freq-bar" style="height: 20%"></div>
-            <div class="freq-bar" style="height: 40%"></div>
-            <div class="freq-bar" style="height: 60%"></div>
-            <div class="freq-bar" style="height: 30%"></div>
-            <div class="freq-bar" style="height: 80%"></div>
-            <div class="freq-bar" style="height: 50%"></div>
-            <div class="freq-bar" style="height: 70%"></div>
-            <div class="freq-bar" style="height: 40%"></div>
+            <div class="freq-bar"></div>
+            <div class="freq-bar"></div>
+            <div class="freq-bar"></div>
+            <div class="freq-bar"></div>
+            <div class="freq-bar"></div>
+            <div class="freq-bar"></div>
+            <div class="freq-bar"></div>
+            <div class="freq-bar"></div>
         </div>
-        <div style="margin-top: 10px; font-size: 0.85rem; color: rgba(255,255,255,0.7);">
-            <span id="modeIndicator">Mode: Hypnotic</span> | 
+        <div class="info-stats">
+            <span id="modeIndicator">MODE: HYPNOTIC</span> | 
             <span id="fpsIndicator">60 FPS</span>
         </div>
     </div>
